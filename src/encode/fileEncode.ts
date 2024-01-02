@@ -12,8 +12,8 @@ const inputPath = "Z:/data/encode/input.pdf";
 const outputPath = "Z:/data/encode/output.mp4";
 const checkPath = "Z:/data/encode/check.pdf";
 const chunkSize = 1024 * 1024 * 2;
-const deSize = chunkSize;
-// const deSize = 2097168;
+// const deSize = chunkSize;
+const deSize = 2097168;
 
 @Injectable()
 export class FileEncodeUtil {
@@ -74,7 +74,7 @@ export class FileEncodeUtil {
 
     readStream.on("end", () => {
       console.log("文件解密完成");
-      let result = this.fileCheck();
+      this.fileCheck();
     });
 
 
